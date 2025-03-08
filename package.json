@@ -35,7 +35,6 @@
     "@eslint/eslintrc": "^3",
     "@types/leaflet": "^1.9.8",
     "@types/node": "^20",
-    "@types/openweather-apis": "^4.4.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/weather-js": "^2.0.4",

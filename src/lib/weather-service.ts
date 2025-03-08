@@ -6,10 +6,6 @@ import { INDONESIAN_CITY_CODES } from './bmkg-api';
 let openWeatherApi: any = null;
 let weatherJs: any = null;
 
-// Set up flags for available APIs
-const HAS_OPENWEATHER_API = false;
-const HAS_WEATHERJS_API = false;
-
 // Only attempt to use these packages in the browser, not during build
 if (typeof window !== 'undefined') {
   try {
