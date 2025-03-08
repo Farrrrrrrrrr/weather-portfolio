@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm install --legacy-peer-deps --no-save && npm run build",
-  "installCommand": "npm install --legacy-peer-deps --no-save",
+  "buildCommand": "npm install --ignore-missing --legacy-peer-deps --no-save && npm run build",
+  "installCommand": "npm install --ignore-missing --legacy-peer-deps --no-save",
   "devCommand": "npm run dev"
 }
