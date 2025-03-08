@@ -19,16 +19,38 @@ export function FeaturedCities() {
     async function fetchData() {
       try {
         setLoading(true);
-        const weatherPromises = FEATURED_CITIES.map(city => 
-          getCityWeather(city)
-        );
-        const results = await Promise.all(weatherPromises);
-        
-        // Extract data sources
+        const results = [];
         const sources: Record<string, string> = {};
-        results.forEach((result, index) => {
-          sources[FEATURED_CITIES[index]] = result.dataSource || 'Unknown';
-        });
+
+        // Process cities one by one to handle errors individually
+        for (const city of FEATURED_CITIES) {
+          try {
+            const data = await getCityWeather(city);
+            results.push(data);
+            sources[city] = data.dataSource || 'Unknown';
+          } catch (cityError) {
+            console.error(`Error fetching weather for ${city}:`, cityError);
+            // Use simulated data for failed requests
+            const mockData = {
+              name: city,
+              dataSource: 'Simulated Data',
+              main: {
+                temp: 25 + Math.random() * 5,
+                humidity: 70
+              },
+              weather: [{
+                main: 'Clear',
+                description: 'clear sky',
+                icon: '01d'
+              }],
+              wind: {
+                speed: 5
+              }
+            };
+            results.push(mockData);
+            sources[city] = 'Simulated Data';
+          }
+        }
         
         setWeatherData(results);
         setDataSources(sources);
