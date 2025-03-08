@@ -82,7 +82,7 @@ export function Map({ cities, weatherData, mapId = "default-map" }: MapProps) {
             key={city.name} 
             position={[city.lat, city.lng]} 
           >
-            <Popup></Popup>
+            <Popup>
               <div className="p-1">
                 <h3 className="font-bold">{city.name}</h3>
                 <p className="text-lg">{Math.round(cityWeather.main.temp)}°C</p>
