@@ -1,0 +1,46 @@
+{
+  "name": "weather-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "1.0.6",
+    "@tremor/react": "^3.14.0",
+    "axios": "^1.6.7",
+    "chart.js": "^4.4.1",
+    "framer-motion": "^11.0.5",
+    "i18next": "^23.10.0",
+    "leaflet": "^1.9.4",
+    "next": "15.2.1",
+    "next-i18next": "^15.2.0",
+    "next-themes": "^0.2.1",
+    "openweather-apis": "^4.5.0",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^14.0.5",
+    "react-leaflet": "^4.2.1",
+    "swr": "^2.2.4",
+    "tailwindcss": "^3.4.1",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/leaflet": "^1.9.8",
+    "@types/node": "^20",
+    "@types/openweather-apis": "^4.4.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/weather-js": "^2.0.4",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.1",
+    "postcss": "^8.4.35",
+    "typescript": "^5"
+  }
+}
